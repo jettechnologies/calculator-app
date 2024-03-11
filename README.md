@@ -31,12 +31,12 @@ Users should be able to:
 
 ### Screenshot
 
-![The desktop view for theme one](./screenshoot/calculator-app-theme-one-d.png,)
-![The mobile view for theme one](./screenshoot/calculator-app-theme-one-m.png,)
-![The desktop view for theme two](./screenshoot/calculator-app-theme-two-d.png,)
-![The mobile view for theme two](./screenshoot/calculator-app-theme-two-m.png,)
-![The desktop view for theme three](./screenshoot/calculator-app-theme-three-d.png,)
-![The mobile view for theme three](./screenshoot/calculator-app-theme-three-m.png,)
+![The desktop view for theme one](./screenshoot/calculator-app-theme-one-d.png)
+![The mobile view for theme one](./screenshoot/calculator-app-theme-one-m.png)
+![The desktop view for theme two](./screenshoot/calculator-app-theme-two-d.png)
+![The mobile view for theme two](./screenshoot/calculator-app-theme-two-m.png)
+![The desktop view for theme three](./screenshoot/calculator-app-theme-three-d.png)
+![The mobile view for theme three](./screenshoot/calculator-app-theme-three-m.png)
 
 ### Links
 
