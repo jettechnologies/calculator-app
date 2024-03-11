@@ -1,13 +1,28 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
-import { createContext, useContext, useReducer, useCallback } from "react";
+import { createContext, useContext, useReducer, useCallback, useEffect } from "react";
 import calculatorReducer, { intialState, ACTIONS } from "./CalculatorReducer"; 
+import { useLocalStorage } from "./useLocalStorage";
 
 const CalculatorContext = createContext();
 
 export const CalculatorProvider = ({children}) =>{
 
     const [state, dispatch] = useReducer(calculatorReducer, intialState);
+    const { setItem } = useLocalStorage("calculator-theme");
+
+    useEffect(() =>{
+        let localStorageData = window.localStorage.getItem("calculator-theme");
+        localStorageData = JSON.parse(localStorageData);  
+
+        if(localStorageData){
+            dispatch({
+                type: ACTIONS.SET_THEME,
+                payload: localStorageData 
+            })
+        }
+
+    }, []);
 
     const setCalc = useCallback((value) =>{
 
@@ -99,7 +114,9 @@ const deleteLast = useCallback(() =>{
             payload: payLoad 
         });
 
-    }, []);
+        setItem(payLoad);
+
+    }, [setItem]);
 
 
     const value = {
