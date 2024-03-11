@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useReducer, useCallback, useEffect } from "react";
-import calculatorReducer, { intialState, ACTIONS } from "./CalculatorReducer"; 
+import calculatorReducer, { intialState, ACTIONS } from "./CalculatorReducer";
 import { useLocalStorage } from "./useLocalStorage";
 
 const CalculatorContext = createContext();
