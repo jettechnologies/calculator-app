@@ -21,7 +21,6 @@ function evaluate({ calc, previousCalc, operation }) {
     if (isNaN(prev) || isNaN(current)) return ""
     let computation = ""
 
-    console.log(operation);
     switch (operation) {
       case "+":
         computation = prev + current
