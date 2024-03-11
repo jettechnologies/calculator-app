@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-style : normal;
+}
+
+html{
+  font-size:62.5%;
+}
+
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+/* border: 0; */
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* select > option{
+  border:none;
+  border-radius:0.5rem;
+  background-color:transparent;
+}
+select > option:focus{
+  outline:none;
+} */
+
+@layer components{
+  .max-container {
+      max-width: 1440px;
+      margin: 0 auto;
+  }
+  .input-outline{
+    @apply outline-1 outline-dark-blue-el;
+  }
+}
+
+.fluid-width{
+  width:clamp(22rem, 50vw, 60rem);
+}
+.fluid-typography{
+  font-size:clamp(1.75rem, 5vw, 2rem);
+  font-weight:700;
+}
+
+/* custom classes for the buttons */
+
+/* for primary buttons */
+.primary-btn-theme-one{
+  @apply bg-theme-one-key-primary-bg text-theme-one-text-blue shadow-md drop-shadow-lg shadow-theme-one-key-primary-shadow;
+}
+.primary-btn-theme-two{
+  @apply bg-theme-two-key-primary-bg text-theme-two-text-yellow shadow-md drop-shadow-lg shadow-theme-two-key-primary-shadow;
+}
+.primary-btn-theme-three{
+  @apply bg-theme-three-key-primary-bg text-theme-three-text-yellow shadow-md drop-shadow-lg shadow-theme-three-key-primary-shadow;
+}
+
+/* for secondary buttons */
+.secondary-btn-theme-one{
+  @apply bg-theme-one-key-secondary-bg text-white shadow-md drop-shadow-lg shadow-theme-one-key-secondary-shadow;
+}
+.secondary-btn-theme-two{
+  @apply bg-theme-two-key-secondary-bg text-white shadow-md drop-shadow-lg shadow-theme-two-key-secondary-shadow;
+}
+.secondary-btn-theme-three{
+  @apply bg-theme-three-key-secondary-bg text-white shadow-md drop-shadow-lg shadow-theme-three-key-secondary-shadow;
+}
+
+/* for teritary buttons */
+.teritary-btn-theme-one{
+  @apply bg-theme-one-toggle-knot-bg text-white shadow-md drop-shadow-lg shadow-theme-one-toggle-shadow;
+}
+.teritary-btn-theme-two{
+  @apply bg-theme-two-toggle-knot-bg text-white shadow-md drop-shadow-lg shadow-theme-two-toggle-shadow;
+}
+.teritary-btn-theme-three{
+  @apply bg-theme-three-toggle-knot-bg text-white shadow-md drop-shadow-lg shadow-theme-three-toggle-shadow;
+}
+.grid-complete{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(auto-fit, 1fr));
+  grid-template-rows: repeat(5, minmax(4rem, 1fr));
+}
